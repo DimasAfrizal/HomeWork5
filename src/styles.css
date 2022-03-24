@@ -1,0 +1,37 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Container {
+  background-color: black;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+#nameArtis {
+  color: orange;
+}
+
+#songTitle {
+  color: orange;
+}
+
+#btnSelect {
+  align-items: center;
+  background-color: orangered;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  height: 30px;
+  line-height: 24px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  opacity: 90%;
+}
+#btnSelect:hover {
+  opacity: 100%;
+}
