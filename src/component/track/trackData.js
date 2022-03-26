@@ -1,11 +1,13 @@
-const Track = ({ Judul, Artist, Album, Cover }) => (
+const Track = ({ Judul, Artist, Album, Cover, Link }) => (
   <div className="card">
     <img src={Cover} alt=""></img>
     <div className="text">
       <p id="namaLagu">Title : {Judul}</p>
       <p id="namaArtist">Artist : {Artist}</p>
       <p id="namaAlbum">Album : {Album}</p>
-      <button id="btnPlay">Play</button>
+      <button id="btnPlay" onClick={() => window.open({ Link }, "Song Play")}>
+        Play
+      </button>
     </div>
   </div>
 );
@@ -814,6 +816,7 @@ export default function AList() {
       Judul={a.name}
       Artist={a.artists[0].name}
       Album={a.album.name}
+      Link={a.external_urls.spotify}
     />
   ));
 }
