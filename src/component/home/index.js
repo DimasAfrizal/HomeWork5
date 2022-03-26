@@ -1,15 +1,11 @@
 import React from "react";
-import Data from "../../Temp";
-import { ButtonComponent } from "../buttonComponent/index";
-import { TextComponent } from "../textComponent/index";
+import { AList } from "../track/trackData";
 
 function HomeComponent() {
   return (
     <>
       <div className="Container">
-        <img id="imgArtist" src={Data.album.images[1].url} alt="" />
-        <TextComponent />
-        <ButtonComponent />
+        <AList />
       </div>
     </>
   );

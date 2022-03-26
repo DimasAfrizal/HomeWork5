@@ -3,26 +3,37 @@
   text-align: center;
 }
 
-.Container {
+.card {
+  border: 2px solid yellow;
   background-color: black;
-  padding-top: 15px;
-  padding-bottom: 30px;
+  width: 40%;
+  padding: 20px 20px;
+  margin: 20px 43px;
+  float: left;
+  box-shadow: 0 10px 20px 0 black;
 }
 
-#nameArtis {
-  color: orange;
+.card:hover {
+  box-shadow: 0 10px 20px 0 yellow;
 }
 
-#songTitle {
-  color: orange;
+#namaArtist {
+  color: yellow;
 }
 
-#btnSelect {
+#namaLagu {
+  color: yellow;
+}
+#namaAlbum {
+  color: yellow;
+}
+
+#btnPlay {
   align-items: center;
-  background-color: orangered;
-  border: 2px solid white;
+  background-color: black;
+  border: 2px solid yellow;
   border-radius: 8px;
-  color: white;
+  color: yellow;
   cursor: pointer;
   font-size: 10px;
   height: 30px;
@@ -30,8 +41,9 @@
   padding: 0 25px;
   position: relative;
   text-align: center;
-  opacity: 90%;
+  margin-bottom: 20px;
 }
-#btnSelect:hover {
-  opacity: 100%;
+#btnPlay:hover {
+  color: black;
+  background-color: yellow;
 }
