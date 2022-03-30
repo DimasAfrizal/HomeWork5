@@ -5,7 +5,7 @@ function HomeComponent() {
   return (
     <>
       <div className="Container">
-        <AList />
+        <AList /> 
       </div>
     </>
   );
