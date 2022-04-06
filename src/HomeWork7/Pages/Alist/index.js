@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 const Alist = ({ handleAddPlaylistOnChange, handleAddPlaylistOnSubmit, addPlaylistData, playlistID, selectedTracks }) => {
     return (
         <div className="playlist-form">

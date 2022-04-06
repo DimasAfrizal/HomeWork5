@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Playlist from "../../Component/Tracks/index";
-import Tracks from "../../Component/Tracks/container";
 import Alist from "../Alist/index";
 import Profile from "../../Component/Profile/index";
+import { useDispatch, useSelector } from "react-redux";
 
 
-function Search({ accessToken }) {
+function Search() {
+  const accessToken = useSelector((state) => state.accessToken.value)
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [user, setUser] = useState({

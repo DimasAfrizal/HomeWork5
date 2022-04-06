@@ -1,4 +1,4 @@
-
+import React, { Component }  from 'react';
 const Tracks = ({track, handleSelectedTrack}) => {
     
     const { album, name: songName, isSelected, uri} =track;
