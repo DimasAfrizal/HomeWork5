@@ -12,6 +12,8 @@ const Login =()=>{
     url += '&scope=' + encodeURIComponent(scope);
     url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
 
+
+    
     return(
         <>
         <a href={url}>

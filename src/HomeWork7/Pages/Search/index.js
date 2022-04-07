@@ -10,6 +10,8 @@ function Search() {
   const accessToken = useSelector((state) => state.accessToken.value)
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
+  const [selectedTrack, setSelectedTrack] = useState([]);
+  const [combinedTracks, setCombinedTracks] = useState([]);
   const [user, setUser] = useState({
     displayName: '',
     imagesUrl: '',
@@ -19,8 +21,7 @@ function Search() {
     title: '',
     description: '',
   })
-  const [selectedTrack, setSelectedTrack] = useState([]);
-  const [combinedTracks, setCombinedTracks] = useState([]);
+  
 
   const handleOnChange = (e) => {
     setQuery(e.target.value);
