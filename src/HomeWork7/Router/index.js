@@ -1,26 +1,22 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import Search from '../Pages/Search/index';
-import Login from "../Pages/Login/index";
 import Home from "../Pages/Auth/index";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useParams,
     Redirect,
     Link
   } from "react-router-dom";
   
 function AppRoute() {
-    const isLogin = true;
     const accessToken = useSelector((state) => state.accessToken.value);
     return (
       <Router>
         <div >
           <ul>
             <li><Link to="/">Home</Link></li>
-            {/* <li><Link to="/login">Login</Link></li> */}
             <li><Link to="/createplaylist">Create Playlist</Link></li>
           </ul>
         </div>
@@ -39,12 +35,5 @@ function AppRoute() {
     );
   }
   // <Route path="/:id"></Route>
-const dada=() =>{
-    return (
-      <div>
-        <h3>Haloooo</h3>
-      </div>
-    );
-  }
 export default AppRoute;
   

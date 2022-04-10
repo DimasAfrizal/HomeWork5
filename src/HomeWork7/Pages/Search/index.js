@@ -3,30 +3,20 @@ import axios from "axios";
 import Playlist from "../../Component/Tracks/index";
 import Alist from "../Alist/index";
 import Profile from "../../Component/Profile/index";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 function Search() {
   const accessToken = useSelector((state) => state.accessToken.value)
-  const [data, setData] = useState([]);
-  const [query, setQuery] = useState("");
-  const [selectedTrack, setSelectedTrack] = useState([]);
   const [combinedTracks, setCombinedTracks] = useState([]);
-  const [user, setUser] = useState({
-    displayName: '',
-    imagesUrl: '',
-    user_id: undefined
-  });
-  const [addPlaylistData, setAddPlaylistData] = useState({
-    title: '',
-    description: '',
-  })
   
-
+  //Query
+  const [query, setQuery] = useState("");
   const handleOnChange = (e) => {
     setQuery(e.target.value);
   };
-
+  //get data from api
+  const [data, setData] = useState([]);
   const getTracks = async (accessToken) => {
     const data = await axios
       .get(
@@ -37,7 +27,12 @@ function Search() {
     setData(data.data.tracks.items);
     console.log(data);
   };
-
+  //get profile or user id
+  const [user, setUser] = useState({
+    displayName: '',
+    imagesUrl: '',
+    user_id: undefined
+  });
   const fetchUserData = async () => {
     const data = await axios
       .get(
@@ -48,6 +43,7 @@ function Search() {
     console.log(data);
   }
 
+  const [selectedTrack, setSelectedTrack] = useState([]);
   const handleSelectedTrack = (uri) => {
     const alreadySelected = selectedTrack.find(selectedTrack => selectedTrack === uri);
     if (alreadySelected) {
@@ -67,12 +63,18 @@ function Search() {
     setCombinedTracks(combinedTracksWithSelectedTrack);
   }, [selectedTrack, data]);
 
+
+  const [addPlaylistData, setAddPlaylistData] = useState({
+    title: '',
+    description: '',
+  })
   const bodyParams = {
     name: addPlaylistData.title,
     description: addPlaylistData.description,
     collaborative: false,
     public: false
   }
+
   const header = {
     Authorization: `Bearer ${accessToken}`
   }

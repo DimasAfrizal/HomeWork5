@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React from 'react';
 const Profile = ({ fetchUserData, user }) => {
     return (
         <div className="profile">

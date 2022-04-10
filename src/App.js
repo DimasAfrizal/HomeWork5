@@ -1,5 +1,4 @@
-import React, { Component }  from 'react';
-import Home from "./HomeWork7/Pages/Auth/index";
+import React from 'react';
 import AppRoute from "./HomeWork7/Router/index";
 import "./styles.css";
 import { Provider } from "react-redux";
