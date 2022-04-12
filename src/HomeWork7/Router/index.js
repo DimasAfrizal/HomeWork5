@@ -14,26 +14,27 @@ function AppRoute() {
     const accessToken = useSelector((state) => state.accessToken.value);
     return (
       <Router>
-        <div >
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/createplaylist">Create Playlist</Link></li>
-          </ul>
+        <div className='navbar'>
+          <div className='nav-right'>
+            <h1/> LOGOS
+          </div >
+          <div className='nav-left'>
+            <ul id='nav-links'>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/createplaylist">Create Playlist</Link></li>
+            </ul>
+          </div >
         </div>
         <Switch>
-          <div className='App'>
+          <div>
             <Route path='/' component={Home}></Route>
             <Route path='/createplaylist'>
               {accessToken !== undefined ? <Search /> : <Redirect to="/" />}
             </Route>
-            {/* <Route path='/login'>
-              <Login />
-            </Route> */}
           </div>
         </Switch>
       </Router>
     );
   }
-  // <Route path="/:id"></Route>
 export default AppRoute;
   

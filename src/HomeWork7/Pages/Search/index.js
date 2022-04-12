@@ -127,7 +127,7 @@ function Search() {
         addPlaylistData={addPlaylistData}
       />
       <input onChange={handleOnChange} />
-      <button onClick={() => { getTracks(accessToken) }}>
+      <button id='btnSearch'onClick={() => { getTracks(accessToken) }}>
         Search
       </button>
 

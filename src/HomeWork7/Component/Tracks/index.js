@@ -7,11 +7,14 @@ const Playlist = ({combinedTracks, handleSelectedTrack}) => {
     const Loop = combinedTracks.map((item) => {
         const {uri} = item;
         return (
-            <Tracks  key={uri} track={item} handleSelectedTrack={handleSelectedTrack}/>
+            <div id="card">
+                <Tracks  key={uri} track={item} handleSelectedTrack={handleSelectedTrack}/>
+            </div> 
+            
         )
     })
     return(
-        <div >{Loop}</div>
+        <div id='listOT'>{Loop}</div>
     )
 };
 

@@ -14,7 +14,7 @@ const Alist = ({
                 <label htmlFor="description"> Description </label><br />
                 <textarea className="description" id="description" type="text" value={addPlaylistData.description} onChange={handleAddPlaylistOnChange} name="description" />
                 <br />
-                <button className="selectButton" type="submit" value="Submit">Submit</button>
+                <button className="selectButton" id='btnSubmit'type="submit" value="Submit">Submit</button>
             </form>
         </div>
     )
