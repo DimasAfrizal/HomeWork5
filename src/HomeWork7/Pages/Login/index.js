@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
 const Login =()=>{
     var client_id = process.env.REACT_APP_SPOTIFY_KEY;
@@ -15,7 +16,7 @@ const Login =()=>{
     return(
         <>
         <a href={url}>
-            <button id='btnLogin'>Login</button>
+        <Button id="btnLogin" size="small">Login</Button>
         </a>
         </>
     )

@@ -48,7 +48,6 @@ body{
   border: 2px solid black;
   background-color: yellow;
   box-shadow: 0 3px 3px 0 black;
-  padding: 5px 10px;
   border-radius: 7px;
   opacity: 100%;
   margin: 10px 10px;
@@ -57,7 +56,6 @@ body{
   color: black;
   border: 2px solid white;
   background-color: yellow;
-  padding: 5px 10px;
   opacity: 85%;
   cursor: pointer;
 }
@@ -68,7 +66,6 @@ body{
   border: 2px solid black;
   background-color: yellow;
   box-shadow: 0 3px 3px 0 black;
-  padding: 5px 10px;
   border-radius: 7px;
   opacity: 100%;
   margin: 10px 10px;
@@ -77,47 +74,40 @@ body{
   color: black;
   border: 2px solid white;
   background-color: yellow;
-  padding: 5px 10px;
   opacity: 85%;
   cursor: pointer;
 }
 
 #btnSubmit {
-  margin: 0 20px;
+  margin: 10px 0;
   color: black;
   border: 2px solid black;
   background-color: yellow;
   box-shadow: 0 3px 3px 0 black;
-  padding: 5px 10px;
   border-radius: 7px;
   opacity: 100%;
-  margin: 10px 10px;
 }
 #btnSubmit:hover{
   color: black;
   border: 2px solid white;
   background-color: yellow;
-  padding: 5px 10px;
   opacity: 85%;
   cursor: pointer;
 }
 
 #btnSearch {
-  margin: 0 20px;
+  margin: 0 10px;
   color: black;
   border: 2px solid black;
   background-color: yellow;
   box-shadow: 0 3px 3px 0 black;
-  padding: 5px 10px;
   border-radius: 7px;
   opacity: 100%;
-  margin: 10px 10px;
 }
 #btnSearch:hover{
   color: black;
   border: 2px solid white;
   background-color: yellow;
-  padding: 5px 10px;
   opacity: 85%;
   cursor: pointer;
 }
@@ -128,7 +118,6 @@ body{
   border: 2px solid black;
   background-color: yellow;
   box-shadow: 0 3px 3px 0 yellow;
-  padding: 5px 10px;
   border-radius: 7px;
   opacity: 100%;
   margin: 10px 10px;
@@ -137,7 +126,6 @@ body{
   color: black;
   border: 2px solid white;
   background-color: yellow;
-  padding: 5px 10px;
   opacity: 85%;
   cursor: pointer;
 }
@@ -161,4 +149,27 @@ body{
   background-color: white;
   color: black;
   /* box-shadow:0 10px 10px 0 white; */
+}
+
+.searchBar{
+  margin: 20px 0;
+}
+
+#title{
+  color: black;
+  background-color: white;
+  border-color: black;
+  border: 1px solid black ;
+}
+#description{
+  color: black;
+  background-color: white;
+  border-color: black;
+  border: 1px solid black ;
+}
+#keyword{
+  color: black;
+  background-color: white;
+  border-color: black;
+  border: 1px solid black ;
 }
