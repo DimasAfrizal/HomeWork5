@@ -8,3 +8,8 @@ export default configureStore({
   }
   // devTools: true
 });
+// const store = configureStore({
+//   reducer: {
+//     accessToken: accessTokenSlice
+//   }
+// });

@@ -3,13 +3,13 @@ import axios from "axios";
 import Playlist from "../../Component/Tracks/index";
 import Alist from "../../Component/Alist/index";
 import Profile from "../../Component/Profile/index";
-import { useSelector } from "react-redux";
+import { RootStateOrAny, useSelector } from "react-redux";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
 
 function Search() {
-  const accessToken = useSelector((state) => state.accessToken.value);
+  const accessToken = useSelector((state: RootStateOrAny) => state.accessToken.value);
   const [combinedTracks, setCombinedTracks] = useState([]);
   
   //Query
@@ -19,7 +19,7 @@ function Search() {
   };
   //get data from api
   const [data, setData] = useState([]);
-  const getTracks = async (accessToken) => {
+  const getTracks = async (accessToken: string) => {
     const data = await axios
       .get(
         `https://api.spotify.com/v1/search?q=${query}&type=track&access_token=${accessToken}`
@@ -45,24 +45,25 @@ function Search() {
     console.log(data);
   }
 
+  type Props={
+    uri: String
+  }
+
   const [selectedTrack, setSelectedTrack] = useState([]);
-  const handleSelectedTrack = (uri) => {
+  const handleSelectedTrack = (uri: string) => {
     const alreadySelected = selectedTrack.find(selectedTrack => selectedTrack === uri);
     if (alreadySelected) {
       setSelectedTrack(selectedTrack.filter(selectedTrack => selectedTrack !== uri));
     }
     else {
-      setSelectedTrack([...selectedTrack, uri]);
+      setSelectedTrack([...selectedTrack, uri]['']);
     }
     console.log(selectedTrack);
-    console.log(uri);
   }
-
-  
 
   useEffect(() => {
     const combinedTracksWithSelectedTrack = data.map((track) => ({
-      ...track,
+      ...track as object,
       isSelected: selectedTrack.find(selectedTrack => selectedTrack === track.uri),
     }));
     setCombinedTracks(combinedTracksWithSelectedTrack);
