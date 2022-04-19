@@ -7,10 +7,10 @@ const Tracks = ({track, handleSelectedTrack}) => {
 
     return(
         <div>
-            <img src={album.images[1].url} id='Cover' alt="This Must Be a Album Cover"></img>
-            <Typography id='Title'>{songName}</Typography>
-            <Typography id='Artis'>{track.artists[0].name}</Typography>
-            <Button id='btnSelect' size="small" onClick={() => handleSelectedTrack(uri)}>{isSelected ? 'Deselect' : 'Select'}</Button>
+            <img data-testid="imgTrackChecker" src={album.images[1].url} id='Cover' alt="This Must Be a Album Cover"></img>
+            <Typography data-testid="titleTrackChecker" id='Title'>{songName}</Typography>
+            <Typography data-testid="artisTrackChecker" id='Artis'>{track.artists[0].name}</Typography>
+            <Button data-testid="selectBtn" id='btnSelect' size="small" onClick={() => handleSelectedTrack(uri)}>{isSelected ? 'Deselect' : 'Select'}</Button>
             <br/>
             <br/>
         </div>

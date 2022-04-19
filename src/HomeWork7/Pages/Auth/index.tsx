@@ -16,7 +16,9 @@ const Home = () => {
     }, [accessToken, dispatch])
 
     return(
-        <Login/>
+        <div data-testid="loginBtn">
+            <Login/>
+        </div>
     )
 
 }

@@ -122,25 +122,34 @@ function Search() {
 
   return (
     <div>
-      <Profile
-        fetchUserData={fetchUserData}
-        user={user}
-      />
-      <Alist
-        handleAddPlaylistOnChange={handleAddPlaylistOnChange}
-        handleAddPlaylistOnSubmit={handleAddPlaylistOnSubmit}
-        addPlaylistData={addPlaylistData}
-      />
-      <div className="searchBar">
-        <TextField id="keyword" size="small" label="Search" variant="outlined" onChange={handleOnChange}/>
-        <Button id='btnSearch'onClick={() => { getTracks(accessToken) }} size="small">Search</Button>
+      <div data-testid="profileChecker">
+        <Profile
+          fetchUserData={fetchUserData}
+          user={user}
+        />
       </div>
-      
-
-      {combinedTracks !== undefined && (
-        <Playlist combinedTracks={combinedTracks} handleSelectedTrack={handleSelectedTrack} />
-      )}
-
+      <div data-testid="createListChecker">
+        <Alist 
+          handleAddPlaylistOnChange={handleAddPlaylistOnChange}
+          handleAddPlaylistOnSubmit={handleAddPlaylistOnSubmit}
+          addPlaylistData={addPlaylistData}
+        />
+      </div>
+      <div data-testid="searchBarChecker">
+        {/* <SearchBar data-testid="searchBarChecker"
+          handleOnChange={handleOnChange}
+          getTracks={getTracks(accessToken)}
+        /> */}
+        <div className="searchBar">
+          <TextField id="keyword" size="small" label="Search" variant="outlined" onChange={handleOnChange}/>
+          <Button id='btnSearch'onClick={() => { getTracks(accessToken) }} size="small">Search</Button>
+        </div>
+      </div>
+      <div data-testid="playlistChecker">
+        {combinedTracks !== undefined && (
+          <Playlist combinedTracks={combinedTracks} handleSelectedTrack={handleSelectedTrack} />
+        )}
+      </div>
     </div>
   );
 

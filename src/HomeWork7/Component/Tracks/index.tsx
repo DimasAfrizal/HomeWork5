@@ -7,7 +7,7 @@ const Playlist = ({combinedTracks, handleSelectedTrack}) => {
     const Loop = combinedTracks.map((item) => {
         const {uri} = item;
         return (
-            <div id="card">
+            <div data-testid="trackChecker"  id="card">
                 <Tracks  key={uri} track={item} handleSelectedTrack={handleSelectedTrack}/>
             </div> 
             

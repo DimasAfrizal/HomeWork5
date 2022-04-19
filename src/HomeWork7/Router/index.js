@@ -16,7 +16,7 @@ function AppRoute() {
       <Router>
         <div className='navbar'>
           <div className='nav-right'>
-            <h1/> LOGOS
+            <h1> LOGOS </h1>
           </div >
           <div className='nav-left'>
             <ul id='nav-links'>

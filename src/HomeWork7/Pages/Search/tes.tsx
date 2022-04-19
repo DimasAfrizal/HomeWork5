@@ -10,7 +10,7 @@ import TextField from '@mui/material/TextField';
 
 function Search() {
   const accessToken = useSelector((state: RootStateOrAny) => state.accessToken.value);
-  const [combinedTracks, setCombinedTracks] = useState([]);
+ 
   
   //Query
   const [query, setQuery] = useState("");
@@ -61,13 +61,15 @@ function Search() {
     console.log(selectedTrack);
   }
 
-  useEffect(() => {
-    const combinedTracksWithSelectedTrack = data.map((track) => ({
-      ...track as object,
-      isSelected: selectedTrack.find(selectedTrack => selectedTrack === track.uri),
-    }));
-    setCombinedTracks(combinedTracksWithSelectedTrack);
-  }, [selectedTrack, data]);
+  const [combinedTracks, setCombinedTracks] = useState([]);
+
+  // useEffect(() => {
+  //   const combinedTracksWithSelectedTrack = data.map((track) => ({
+  //     ...track as object,
+  //     isSelected: selectedTrack.find(selectedTrack => selectedTrack === track.uri),
+  //   }));
+  //   setCombinedTracks(combinedTracksWithSelectedTrack);
+  // }, [selectedTrack, data]);
 
 
   const [addPlaylistData, setAddPlaylistData] = useState({
