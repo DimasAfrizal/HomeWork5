@@ -11,12 +11,15 @@ const Login =()=>{
     url += '&scope=' + encodeURIComponent(scope);
     url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
 
-
+    const loginMessage = () => {
+        alert('Logined - Click Create Playlist to continue');
+    }
     
     return(
         <>
         <a href={url}>
-        <Button id="btnLogin" size="small">Login</Button>
+            <Button id="btnLogin" size="small" onClick={loginMessage}>Login</Button>
+
         </a>
         </>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../Pages/Search/index';
+import Search from '../Pages/Search/index.js';
 import Home from "../Pages/Auth/index";
 import { useSelector } from "react-redux";
 import {

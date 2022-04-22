@@ -136,10 +136,6 @@ function Search() {
         />
       </div>
       <div data-testid="searchBarChecker">
-        {/* <SearchBar data-testid="searchBarChecker"
-          handleOnChange={handleOnChange}
-          getTracks={getTracks(accessToken)}
-        /> */}
         <div className="searchBar">
           <TextField id="keyword" size="small" label="Search" variant="outlined" onChange={handleOnChange}/>
           <Button id='btnSearch'onClick={() => { getTracks(accessToken) }} size="small">Search</Button>
