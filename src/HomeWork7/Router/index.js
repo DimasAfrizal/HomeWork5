@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from '../Pages/Search/index.js';
+import Search from '../Pages/Search/index';
 import Home from "../Pages/Auth/index";
 import { useSelector } from "react-redux";
 import {
@@ -12,6 +12,13 @@ import {
   
 function AppRoute() {
     const accessToken = useSelector((state) => state.accessToken.value);
+    
+    const linkStyle = {
+      margin: '10px 10px',
+      textDecoration: "none",
+      color: 'yellow',
+    };
+
     return (
       <Router>
         <div className='navbar'>
@@ -19,10 +26,9 @@ function AppRoute() {
             <h1> LOGOS </h1>
           </div >
           <div className='nav-left'>
-            <ul id='nav-links'>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/createplaylist">Create Playlist</Link></li>
-            </ul>
+            <Link  style={linkStyle} to="/">Home</Link>
+            <Link style={linkStyle} to="/createplaylist">Create Playlist</Link>
+            
           </div >
         </div>
         <Switch>

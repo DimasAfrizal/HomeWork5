@@ -22,7 +22,7 @@ const Alist = ({
                 <label htmlFor="description"> Description </label><br />
                 <textarea className="description" id="description"  value={addPlaylistData.description} onChange={handleAddPlaylistOnChange} name="description" />
                 <br />
-                <Button className="selectButton" id='btnSubmit'type="submit" value="Submit" size="small" onClick={submitMessage}>Submit</Button>
+                <Button size="small" color='primary' variant='contained'type="submit" value="Submit" onClick={submitMessage}>Submit</Button>
                 
             </form>
         </div>
