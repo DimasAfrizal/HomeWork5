@@ -4,9 +4,9 @@ import Button from '@mui/material/Button';
 const Login =()=>{
     var client_id = process.env.REACT_APP_SPOTIFY_KEY;
     //uri for vercel
-    // var redirect_uri = 'https://final-project-olive.vercel.app/';
+    var redirect_uri = 'https://final-project-olive.vercel.app/';
     //uri for local
-    var redirect_uri = 'http://localhost:3000/';
+    //var redirect_uri = 'http://localhost:3000/';
     var scope = 'playlist-modify-private';
     var url = 'https://accounts.spotify.com/authorize';
     url += '?response_type=token';

@@ -138,7 +138,7 @@ function Search() {
       <div data-testid="searchBarChecker">
         <div className="searchBar">
           <TextField id="keyword" size="small" label="Search" variant="outlined" onChange={handleOnChange}/>
-          <Button color='primary' variant='contained' id='btnLoginon' Click={() => { getTracks(accessToken) }} size="small">Search</Button>
+          <Button id='btnSearch'onClick={() => { getTracks(accessToken) }} size="small">Search</Button>
         </div>
       </div>
       <div data-testid="playlistChecker">
